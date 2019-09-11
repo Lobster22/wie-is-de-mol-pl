@@ -1,1 +1,14 @@
 @import 'config';
+
+body {
+    font-family: 'Rajdhani', sans-serif;
+}
+
+footer {
+    width: 100%;
+    background: yellowgreen;
+
+    .footer-first {
+        text-align: center;
+    }    
+}
