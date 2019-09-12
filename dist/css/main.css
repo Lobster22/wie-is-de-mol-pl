@@ -6,16 +6,174 @@
   padding: 0;
 }
 
-body {
-  font-family: 'Rajdhani', sans-serif;
+header {
+  height: 100vh;
+  color: #ffffff;
+}
+
+header .video-bg-wrapper .video-bg {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+}
+
+header .video-bg-wrapper::before, header .video-bg-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+header .video-bg-wrapper::before {
+  background-color: transparent;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(95%, rgba(0, 0, 0, 0.8)));
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.8) 95%);
+}
+
+header .video-bg-wrapper::after {
+  background-image: url("../assets/components/stripes-black.png");
+  opacity: .15;
+}
+
+header .header-txt {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+}
+
+header .header-txt .header__btn {
+  color: #ffffff;
+  border: 0;
+  background-color: transparent;
 }
 
 footer {
   width: 100%;
-  background: yellowgreen;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 footer .footer-first {
   text-align: center;
+}
+
+footer .footer-first .footer-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer-first .footer-btns .footer-btn {
+  width: 180px;
+  padding: .9375em 1.25em;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+footer .footer-first .footer-btns .footer-btn::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 10px;
+  height: 10px;
+  opacity: .6;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+footer .footer-first .footer-btns .footer-btn i {
+  font-size: 30px;
+}
+
+footer .footer-second {
+  text-align: center;
+  font-family: 'Roboto';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer-second i {
+  color: #fff;
+}
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.main-bg {
+  z-index: -2;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-image: url("../assets/components/bg-mobile.jpg");
+}
+
+.main-bg::after {
+  content: '';
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-image: url("../assets/components/pattern-grid-dots.png");
+}
+
+.website-logo {
+  position: absolute;
+  z-index: 100;
+  top: -5px;
+  left: .625rem;
+  width: 90px;
+  height: 104px;
+  background-image: url("../assets/components/logo_WIDM.png");
+  background-size: 100%;
+}
+
+.hidden {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */

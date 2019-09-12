@@ -1,14 +1,49 @@
 @import 'config';
+@import 'header';
+@import 'footer';
 
 body {
     font-family: 'Rajdhani', sans-serif;
 }
 
-footer {
-    width: 100%;
-    background: yellowgreen;
-
-    .footer-first {
-        text-align: center;
-    }    
+a {
+    width: fit-content;
+    text-decoration: none;
 }
+
+.main-bg {
+    z-index: -2;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: url('../assets/components/bg-mobile.jpg');
+    
+    &::after {
+        content: '';
+        z-index: -1;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-image: url('../assets/components/pattern-grid-dots.png');
+    }
+}
+
+.website-logo {
+    position: absolute;
+    z-index: 100;
+    top: -5px;
+    left: .625rem;
+    width: 90px;
+    height: 104px;
+    background-image: url('../assets/components/logo_WIDM.png');
+    background-size: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
